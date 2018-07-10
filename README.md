@@ -1,1 +1,0 @@
-# openbox-settings
