@@ -9,7 +9,6 @@ sleep 1; manjaro-compositor --start &
 # restore wallpaper
 #sleep 1; nitrogen --restore &
 sleep 1; pcmanfm -d --desktop &
-sleep 1; polybar -c ~/.config/polybar/config openbox-bar &
 sleep 1; manjaro-tint2-session &
 manjaro-conky-session &
 
