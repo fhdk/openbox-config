@@ -28,7 +28,7 @@
 ! xterm
 ! ------------------------------------------------------------------------------
 xterm*font: DejaVu Sans Mono Book
-xterm*faceName: DejaVu Sans Mono Book:size=11:antialias=false
+xterm*faceName: DejaVu Sans Mono Book:size=12:antialias=false
 xterm*loginShell: true
 xterm*vt100*geometry: 90x34
 xterm*saveLines: 2000

@@ -7,5 +7,5 @@ Icon=gtk-dialog-authentication
 
 [X-Action-Profile profile-zero]
 MimeTypes=inode/directory;
-Exec=/usr/bin/gksu /usr/bin/pcmanfm %u
+Exec=/usr/bin/gksu-polkit /usr/bin/pcmanfm %u
 Name=Default profile

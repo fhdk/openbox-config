@@ -1,4 +1,0 @@
-Web browser,chromium,chromium
-File manager,exo-open --launch FileManager,system-file-manager
-Terminal,termite,utilities-terminal
-^sep()
