@@ -42,6 +42,7 @@ fi
 
 gnome-keyring-daemon --start --components=pkcs11 &
 lxpolkit &
+
 kbdrate -d 400 -r 50
 xset r rate 400 50
 xset s 3600 3600

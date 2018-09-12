@@ -5,7 +5,7 @@
 # LANG=en_US.UTF8
 
 # GNOME Keyring
-export "$(gnome-keyring-daemon --start --components=pkcs11,secrets)"
+#export "$(gnome-keyring-daemon --start --components=pkcs11,secrets)"
 
 # xdg-open applications
 export XDG_CURRENT_DESKTOP=XFCE
