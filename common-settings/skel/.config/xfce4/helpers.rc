@@ -1,5 +1,5 @@
 TerminalEmulator=custom-TerminalEmulator
-WebBrowser=firefox-developer-edition
+WebBrowser=chromium
 MailReader=thunderbird
 FileManager=Thunar
 
