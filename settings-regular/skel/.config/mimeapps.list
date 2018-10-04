@@ -2,8 +2,8 @@
 text/plain=xed.desktop;
 application/xml=xed.desktop;
 application/x-shellscript=xed.desktop;
-x-scheme-handler/http=exo-web-browser.desktop;
-x-scheme-handler/https=exo-web-browser.desktop;
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
 x-scheme-handler/mailto=exo-mail-reader.desktop;
 x-scheme-handler/trash=exo-file-manager.desktop;
 inode/directory=exo-file-manager.desktop;
@@ -62,6 +62,7 @@ application/pdf=qpdfview.desktop;libreoffice-draw.desktop;
 application/x-virtualbox-ova=virtualbox.desktop;
 application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
 text/csv=xed.desktop;
+audio/mp4=mpv.desktop;
 
 [Default Applications]
 text/plain=xed.desktop;

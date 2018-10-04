@@ -1,9 +1,7 @@
-## dual-head - use arandr to set preference
-## save as dual-head.sh
-# ~/.screenlayout/dual-head.sh &
-
-## enable numlock, commented for laptop users
-# sleep 0.5; numlockx &
+## use arandr to set screen preference
+## save as ~/.screenlayout/dual-head.sh
+## uncomment next line
+~/.screenlayout/dual-head.sh
 
 ## restore wallpaper
 sleep 1; nitrogen --restore &
@@ -24,11 +22,16 @@ sleep 1; manjaro-tint2-session &
 sleep 1; volumeicon &
 
 ## Required for xfce settings to work
-xfsettingsd &
+# xfsettingsd &
 
-## PolicyKit authentication
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ## Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
+
+## launch thunar in daemon mode
+# sleep 1; thunar --daemon &
+
+# enable numlock, commented out for laptop users
+sleep 0.5; numlockx &
+
 

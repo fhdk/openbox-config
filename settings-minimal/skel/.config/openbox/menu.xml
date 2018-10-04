@@ -120,7 +120,7 @@
     <separator/>
     <item label="Wallpaper">
         <action name="Execute">
-            <command>pcmanfm --desktop-pref</command>
+            <command>nitrogen</command>
         </action>
     </item>
     <item label="Panel Chooser">

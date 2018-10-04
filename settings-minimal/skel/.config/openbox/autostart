@@ -1,17 +1,34 @@
-lxsession &
+## dual-head - use arandr to set preference
+## save as dual-head.sh
+# ~/.screenlayout/dual-head.sh &
 
-sleep 1; ob-autostart -d &
+## enable numlock, commented for laptop users
+# sleep 0.5; numlockx &
 
-sleep 1; manjaro-compositor --start &
-
-#sleep 0.5; numlockx &
-
+## restore wallpaper
 sleep 1; nitrogen --restore &
 
-sleep 1; manjaro-tint2-session &
+## Openbox autostart
+sleep 1; ob-autostart -d &
 
+## compositor
+sleep 1; manjaro-compositor --start &
+
+## launch conky
 manjaro-conky-session &
 
+## launch tint2
+sleep 1; manjaro-tint2-session &
+
+## volumeicon
+sleep 1; volumeicon &
+
+## Required for xfce settings to work
 xfsettingsd &
 
+## PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+## Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
+
