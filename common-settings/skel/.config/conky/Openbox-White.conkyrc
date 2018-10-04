@@ -1,13 +1,11 @@
 conky.config = {
-	alignment = 'bottom_left',
+	alignment = 'top_right',
 	background = true,
-	border_width = 0,
-	color2 = '62808e',
+	color2 = 'e0e2e3',
 	cpu_avg_samples = 2,
-	default_color = '62808e',
+	default_color = 'e0e2e3',
 	double_buffer = true,
 	font = 'DejaVu Sans Mono Boot:size=10',
-	draw_outline = false,
 	draw_shades = false,
 	gap_x = 25,
 	gap_y = 45,
@@ -17,11 +15,11 @@ conky.config = {
 	own_window_class = "Conky",
 	own_window_type = 'desktop',
 	own_window_transparent = true,
-	update_interval = 1.0,
+	update_interval = 2.0,
 	use_xft = true,
 }
 conky.text = [[
-${alignc}${alignc}${font :size=24}SYSTEM INFO${font}
+${alignc}S Y S T E M    I N F O
 ${hr}
 Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
@@ -37,4 +35,23 @@ Swap${goto 60}${swap}${alignr}${swapmax}
 
 CPU:${goto 60}Used${alignr}GHz
 Avg${goto 60}${cpu cpu0}%${alignr}${freq_g}
+
+${alignc}S H O R T C U T    K E Y S
+${hr}
+[PrtSc]${alignr}Screenshot
+[Super]${alignr}JG Menu
+[Alt] + F1${alignr}JG Menu
+#[Ctrl] + Space${alignr}Ulauncher
+[Alt] + F2${alignr}Rofi Launcher
+[Super] + Space${alignr}Openbox Menu
+[Alt] + Space${alignr}Window Menu
+[Super] + [Enter]${alignr}Terminal
+[Super] + e${alignr}Text Editor
+[Super] + f${alignr}File Manager
+[Super] + m${alignr}Music Player
+[Super] + w${alignr}Web Browser
+[Super] + v${alignr}Audio Control
+[Super] + s${alignr}Window Switcher
+[Ctrl] + [Alt] + L${alignr}Lock
+[Ctrl] + [Alt] + [Delete]${alignr}Logout
 ]];

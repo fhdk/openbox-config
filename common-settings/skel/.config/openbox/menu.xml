@@ -123,14 +123,14 @@
             <command>nitrogen</command>
         </action>
     </item>
-    <item label="Panel Chooser">
-        <action name="Execute">
-            <command>manjaro-panel-chooser</command>
-        </action>
-    </item>
     <item label="Rofi Theme">
         <action name="Execute">
             <command>rofi-theme-selector</command>
+        </action>
+    </item>
+    <item label="Panel Chooser">
+        <action name="Execute">
+            <command>manjaro-panel-chooser</command>
         </action>
     </item>
 </menu>

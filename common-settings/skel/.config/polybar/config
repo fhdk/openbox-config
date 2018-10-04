@@ -16,7 +16,7 @@ inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor = HDMI-1
-monitor-fallback = HDMI1
+monitor-fallback = 
 
 ;tray-position = center
 ;tray-padding =
@@ -25,4 +25,4 @@ monitor-fallback = HDMI1
 
 modules-left   = manjaro workspaces window_switch
 modules-center =
-modules-right  = pkg memory temperature coreuse clock
+modules-right  = pkg memory temperature coreuse volume_alsa clock

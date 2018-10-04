@@ -40,8 +40,10 @@ if [ -f ~/.xprofile ]; then
     . ~/.xprofile
 fi
 
-gnome-keyring-daemon --start --components=pkcs11 &
-lxpolkit &
+# Keyring daemon
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &
+# PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 kbdrate -d 400 -r 50
 xset r rate 400 50

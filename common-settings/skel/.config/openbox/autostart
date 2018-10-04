@@ -1,37 +1,36 @@
-## use arandr to set screen preference
-## save as ~/.screenlayout/dual-head.sh
-## uncomment next line
-~/.screenlayout/dual-head.sh
+### use arandr to set screen preference
+### save as ~/.screenlayout/dual-head.sh
+# ~/.screenlayout/dual-head.sh
 
-## restore wallpaper
+### restore wallpaper
 sleep 1; nitrogen --restore &
 
-## Openbox autostart
+### Openbox autostart
 sleep 1; ob-autostart -d &
 
-## compositor
+### compositor
 sleep 1; manjaro-compositor --start &
 
-## launch conky
+### launch conky
 manjaro-conky-session &
 
-## launch tint2
+### launch tint2
 sleep 1; manjaro-tint2-session &
 
-## volumeicon
+### volumeicon
 sleep 1; volumeicon &
 
-## Required for xfce settings to work
-# xfsettingsd &
-
-
-## Side shortcuts for file managers
+### Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
 
-## launch thunar in daemon mode
+# enable numlock, commented out for laptop users
+# sleep 0.5; numlockx &
+
+### launch thunar in daemon mode
 # sleep 1; thunar --daemon &
 
-# enable numlock, commented out for laptop users
-sleep 0.5; numlockx &
+### Required for xfce settings to work
+# xfsettingsd &
+
 
 
