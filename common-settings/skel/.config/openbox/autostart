@@ -1,6 +1,7 @@
 ### use arandr to set screen preference
 ### save as ~/.screenlayout/dual-head.sh
-# ~/.screenlayout/dual-head.sh
+### uncomment next line
+~/.screenlayout/dual-head.sh
 
 ### restore wallpaper
 sleep 1; nitrogen --restore &
@@ -14,8 +15,8 @@ sleep 1; manjaro-compositor --start &
 ### launch conky
 manjaro-conky-session &
 
-### launch tint2
-sleep 1; manjaro-tint2-session &
+sleep 1; manjaro-polybar-session &
+sleep 1; manjaro-polybar-session &
 
 ### volumeicon
 sleep 1; volumeicon &
@@ -24,7 +25,7 @@ sleep 1; volumeicon &
 xdg-user-dirs-gtk-update &
 
 # enable numlock, commented out for laptop users
-# sleep 0.5; numlockx &
+sleep 0.5; numlockx &
 
 ### launch thunar in daemon mode
 # sleep 1; thunar --daemon &
