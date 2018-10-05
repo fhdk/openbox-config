@@ -15,11 +15,11 @@ sleep 1; manjaro-compositor --start &
 ### launch conky
 manjaro-conky-session &
 
-sleep 1; manjaro-polybar-session &
-sleep 1; manjaro-polybar-session &
-
 ### volumeicon
 sleep 1; volumeicon &
+
+### PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ### Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
