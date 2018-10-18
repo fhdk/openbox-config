@@ -15,7 +15,7 @@ include-file = $HOME/.config/polybar/modules.conf
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-1
+monitor = 
 monitor-fallback = 
 
 ;tray-position = center
@@ -25,4 +25,4 @@ monitor-fallback =
 
 modules-left   = manjaro workspaces window_switch
 modules-center =
-modules-right  = pkg memory temperature coreuse volume_alsa clock
+modules-right  = pkg memory temperature coreuse pulseaudio clock
