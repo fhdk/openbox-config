@@ -3,20 +3,18 @@
 ### uncomment next line
 # ~/.screenlayout/dual-head.sh
 
-### restore wallpaper
-sleep 1; nitrogen --restore &
+### compositor
+sleep 1; manjaro-compositor --start &
 
 ### Openbox autostart
 sleep 1; ob-autostart -d &
 
-### compositor
-sleep 1; manjaro-compositor --start &
+### restore wallpaper
+sleep 1; nitrogen --restore &
+sleep 1; manjaro-tint2-session &
 
 ### launch conky
 manjaro-conky-session &
-
-### launch tint2
-manjaro-tint2-session
 
 ### volumeicon
 sleep 1; volumeicon &
@@ -27,8 +25,8 @@ sleep 1; volumeicon &
 ### Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
 
-### enable numlock, commented out for laptop users
-# sleep 0.5; numlockx &
+# enable numlock, commented out for laptop users
+sleep 0.5; numlockx &
 
 ### launch thunar in daemon mode
 sleep 1; thunar --daemon &

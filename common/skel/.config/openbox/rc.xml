@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
-    <strength>10</strength>
-    <screen_edge_strength>20</screen_edge_strength>
+    <strength>60</strength>
+    <screen_edge_strength>30</screen_edge_strength>
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
@@ -480,11 +480,13 @@
         <command>exo-open --launch TerminalEmulator</command>
       </action>
     </keybind>
-    <keybind key="C-space">
-      <action name="Execute">
-        <command>rofr.sh -r</command>
-      </action>
-    </keybind>
+  <!-- bound to synapse
+      <keybind key="C-space">
+        <action name="Execute">
+          <command>rofr.sh -r</command>
+        </action>
+      </keybind>
+  -->
     <keybind key="C-A-l">
       <action name="Execute">
         <command>lockscreen -- scrot</command>
@@ -729,7 +731,7 @@
         </action>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action name="ToggleMaximizeFull"/>
+        <action name="ToggleShade"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">
