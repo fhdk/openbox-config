@@ -462,7 +462,7 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>audacious</command>
+        <command>deadbeef</command>
       </action>
     </keybind>
     <keybind key="W-v">

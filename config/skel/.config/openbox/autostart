@@ -6,12 +6,12 @@
 ### compositor
 sleep 1; manjaro-compositor --start &
 
-### Openbox autostart
-sleep 1; ob-autostart -d &
-
 ### restore wallpaper
 sleep 1; nitrogen --restore &
 sleep 1; manjaro-tint2-session &
+
+### Openbox autostart
+sleep 1; ob-autostart -d &
 
 ### launch conky
 manjaro-conky-session &
