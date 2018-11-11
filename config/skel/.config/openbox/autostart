@@ -25,8 +25,9 @@ sleep 1; volumeicon &
 ### Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
 
-# enable numlock, commented out for laptop users
-sleep 0.5; numlockx &
+### enable numlock
+### uncomment next line
+# sleep 0.5; numlockx &
 
 ### launch thunar in daemon mode
 sleep 1; thunar --daemon &
