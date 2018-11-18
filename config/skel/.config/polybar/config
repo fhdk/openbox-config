@@ -15,8 +15,8 @@ include-file = $HOME/.config/polybar/modules.conf
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-1
-monitor-fallback =
+monitor = 
+monitor-fallback = 
 
 ;tray-position = center
 ;tray-padding =

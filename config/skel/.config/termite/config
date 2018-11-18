@@ -11,7 +11,6 @@ font = DejaVu Sans Mono Book 10
 scrollback_lines = 10000
 search_wrap = true
 icon_name = utilities-terminal
-geometry = 950x460
 clickable_url = true
 cursor_blink = system
 cursor_shape = block
