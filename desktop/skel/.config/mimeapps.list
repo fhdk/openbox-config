@@ -2,7 +2,7 @@
 application/epub+zip=engrampa.desktop;xarchiver.desktop
 application/gzip=engrampa.desktop;xarchiver.desktop
 application/json=sublime_text_3.desktop;xed.desktop;
-application/octet-stream=engrampa.desktop;xarchiver.desktop
+application/octet-stream=sublime_text_3.desktop;xed.desktop;engrampa.desktop;xarchiver.desktop;
 application/pdf=qpdfview.desktop;libreoffice-draw.desktop;
 application/pgp-keys=sublime_text_3.desktop;xed.desktop;
 application/pkix-cert=gcr-viewer.desktop;
@@ -30,13 +30,13 @@ application/x-tint2-theme=tint2conf.desktop;sublime_text_3.desktop;xed.desktop;
 application/x-virtualbox-ova=virtualbox.desktop;
 application/x-xbel=sublime_text_3.desktop;xed.desktop;
 application/x-yaml=sublime_text_3.desktop;xed.desktop;
-application/zip=engrampa.desktop;xarchiver.desktopengrampa.desktop;xarchiver.desktop
+application/zip=engrampa.desktop;xarchiver.desktopengrampa.desktop;xarchiver.desktop;
 audio/mpeg=deadbeef.desktop;
 audio/x-wav=deadbeef.desktop;
 image/gif=smplayer.desktop;
 image/jpeg=gimp.desktop;viewnior.desktop;gpicview.desktop;
-image/png=gimp.desktop;viewnior.desktop;gpicview.desktop;
-image/svg+xml=viewnior.desktop;gpicview.desktop;
+image/png=gimp.desktop;gpicview.desktop;viewnior.desktop;
+image/svg+xml=inkscape.desktop;viewnior.desktop;gpicview.desktop;
 image/vnd.adobe.photoshop=gimp.desktop;
 image/x-xbitmap=viewnior.desktop;gpicview.desktop;
 image/x-xcf=gimp.desktop;
@@ -69,6 +69,10 @@ x-scheme-handler/http=exo-web-browser.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;
 x-scheme-handler/mailto=exo-mail-reader.desktop;
 x-scheme-handler/trash=exo-file-manager.desktop;
+inode/symlink=Thunar-folder-handler.desktop;
+text/x-makefile=sublime_text_3.desktop;xed.desktop;
+application/sql=sublime_text_3.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
 
 [Default Applications]
 application/x-shellscript=sublime_text_3.desktop;xed.desktop;
@@ -81,4 +85,3 @@ x-scheme-handler/about=chromium.desktop;
 x-scheme-handler/http=chromium.desktop;
 x-scheme-handler/https=chromium.desktop;
 x-scheme-handler/unknown=chromium.desktop;
-
