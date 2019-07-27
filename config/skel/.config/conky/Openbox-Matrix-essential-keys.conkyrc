@@ -24,9 +24,9 @@ ${hr}
 [PrtSc]${alignr}Screenshot
 [Super] + Space${alignr}Openbox Menu
 [Alt] + Space${alignr}Window Menu
-[Alt] + F1${alignr}JG Menu
+[Alt] + F1${alignr}JG Launcher
 [Alt] + F2${alignr}Rofi Launcher
-[Super] + [Enter]${alignr}Terminal
+[Super] + t${alignr}Terminal
 [Super] + e${alignr}Text Editor
 [Super] + f${alignr}File Manager
 [Super] + m${alignr}Music Player

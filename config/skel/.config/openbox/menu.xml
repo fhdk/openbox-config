@@ -57,11 +57,6 @@
                 <command>obkey</command>
             </action>
         </item>
-        <item label="GUI Autostart Editor">
-            <action name="Execute">
-                <command>ob-autostart</command>
-            </action>
-        </item>
         <separator />
         <item label="Edit autostart">
             <action name="Execute">
