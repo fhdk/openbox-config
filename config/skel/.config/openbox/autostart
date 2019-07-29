@@ -6,7 +6,7 @@
 #~/.screenlayout/dual-head.sh
 
 ### Required for xfce settings to work
-xfsettingsd &
+sleep 0.5; xfsettingsd &
 
 ### compositor
 sleep 1; manjaro-compositor --start &
@@ -33,7 +33,7 @@ manjaro-conky-session &
 ### volumeicon
 sleep 1; volumeicon &
 
-## skippy
+## skippy windowswitcher
 skippy-xd --config ~/.config/skippy-xd/skippy-xd.rc --start-daemon &
 
 ## super key for menu
