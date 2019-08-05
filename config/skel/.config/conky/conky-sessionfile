@@ -1,2 +1,2 @@
-conky -c ~/.config/conky/Openbox-Golden-sysinfo.conkyrc & sleep 0.5
-conky -c ~/.config/conky/Openbox-Golden-essential-keys.conkyrc & sleep 0.5
+conky -c ~/.config/conky/Openbox-Matrix-essential-keys.conkyrc & sleep 0.5
+conky -c ~/.config/conky/Openbox-Matrix-sysinfo.conkyrc & sleep 0.5
