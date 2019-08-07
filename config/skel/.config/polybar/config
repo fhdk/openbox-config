@@ -23,6 +23,6 @@ monitor-fallback =
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-modules-left   = manjaro workspaces window_switch
-modules-center =
-modules-right  = battery pkg memory temperature coreuse clock
+modules-left   = manjaro workspaces
+modules-center =  window_switch clock
+modules-right  = alsa battery pkg network memory temperature coreuse
