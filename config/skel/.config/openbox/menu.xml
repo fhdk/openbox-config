@@ -5,7 +5,7 @@
 <menu id="disk-utilities" label="Disk Utilities">
 	<item label="Clonezilla">
 		<action name="Execute">
-			<command>termite -e &quot;sudo clonezilla&quot;</command>
+			<command>termite -t "Clonezilla" -e &quot;sudo clonezilla&quot;</command>
 		</action>
 	</item>
 	<item label="Disks">
@@ -136,7 +136,7 @@
 	<separator label="Manjaro Openbox"/>
 	<item label="Terminal">
 		<action name="Execute">
-			<command>exo-open --launch TerminalEmulator</command>
+			<command>termite -t "Termite"</command>
 		</action>
 	</item>
 	<item label="File Manager">
