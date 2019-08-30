@@ -1,4 +1,9 @@
 .window-frame {
-  box-shadow: none;
+  box-shadow: solid;
   margin: 0;
+}
+
+decoration {
+	border: 1px solid #76797f;
+	background: #76797f;
 }
