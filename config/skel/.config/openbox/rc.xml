@@ -719,7 +719,7 @@
         </action>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action name="ToggleShade"/>
+        <action name="ToggleMaximizeFull"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">
