@@ -1,1 +1,1 @@
-rofi.theme: /home/fh/.local/share/rofi/themes/manjaro-matcha-dark-sea.rasi
+rofi.theme: ${HOME}/.local/share/rofi/themes/manjaro-matcha-dark-sea.rasi
