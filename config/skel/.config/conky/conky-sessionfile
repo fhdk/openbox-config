@@ -1,1 +1,1 @@
-conky -c ~/.config/conky/conky4core.conkyrc & sleep 0.5
+conky -c /home/fh/.config/conky/conky8core.conkyrc & sleep 0.5

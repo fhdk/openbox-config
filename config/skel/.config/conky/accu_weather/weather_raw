@@ -7,7 +7,7 @@
 		<description>AccuWeather.com Forecast &amp; Current Conditions</description>
 		<ttl>60</ttl>
 		<copyright>Copyright 2019, AccuWeather, Inc., All rights reserved. For personal use only.</copyright>
-		<pubDate>Sun, 06 Oct 2019 10:53:28 GMT</pubDate> 
+		<pubDate>Sun, 06 Oct 2019 12:09:38 GMT</pubDate> 
 		<language>en-us</language> 
 		<image>
 			<title>Aarhus, DK - AccuWeather.com Forecast</title>
@@ -19,23 +19,23 @@
 			<height>19</height>
 		</image>		
 		<item>
-			<title>Currently: Mostly Sunny: 9C</title> 
+			<title>Currently: Mostly Sunny: 10C</title> 
 			<link>http://www.accuweather.com</link>
 			<guid isPermaLink="false">http://www.accuweather.com</guid>
 			
-				<description>Currently in Aarhus, DK: 9 &#176;C and Mostly Sunny
+				<description>Currently in Aarhus, DK: 10 &#176;C and Mostly Sunny
 				&lt;img src="http://vortex.accuweather.com/phoenix2/images/common/icons/02_31x31.gif"&gt;
 				</description> 				
 			
-			<pubDate>Sun, 06 Oct 2019 10:53:28 GMT</pubDate>
+			<pubDate>Sun, 06 Oct 2019 12:09:38 GMT</pubDate>
 		</item>
 		
 			<item>
 				<title>10/6/2019 Forecast</title>
 				<link>http://www.accuweather.com/get/weather?locationid=124594&amp;day=1</link> 
 				<guid isPermaLink="false">http://www.accuweather.com/get/weather?locationid=124594&amp;day=1</guid>
-				<description>High: 11 C Low: -1 C Mostly cloudy and cool &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/06_31x31.gif" &gt;</description>
-				<pubDate>Sun, 06 Oct 2019 10:53:28 GMT</pubDate>
+				<description>High: 11 C Low: -1 C Some sun, then clouds; cool &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/06_31x31.gif" &gt;</description>
+				<pubDate>Sun, 06 Oct 2019 12:09:38 GMT</pubDate>
 			</item>
 		
 			<item>
@@ -43,14 +43,14 @@
 				<link>http://www.accuweather.com/get/weather?locationid=124594&amp;day=2</link> 
 				<guid isPermaLink="false">http://www.accuweather.com/get/weather?locationid=124594&amp;day=2</guid>
 				<description>High: 9 C Low: 4 C Chilly with clouds and sun &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/04_31x31.gif" &gt;</description>
-				<pubDate>Sun, 06 Oct 2019 10:53:28 GMT</pubDate>
+				<pubDate>Sun, 06 Oct 2019 12:09:38 GMT</pubDate>
 			</item>
 		<item>
 <title>The AccuWeather.com RSS Center</title>
 <description>To discover additional weather feeds, visit the AccuWeather.com RSS Center at http://www.accuweather.com/en/downloads</description>
 <link>http://www.accuweather.com/en/downloads</link>
 <guid isPermaLink="false">http://www.accuweather.com/en/downloads</guid>
-<pubDate>Sun, 06 Oct 2019 10:53:28 GMT</pubDate>
+<pubDate>Sun, 06 Oct 2019 12:09:38 GMT</pubDate>
 </item>
 </channel>
 </rss>

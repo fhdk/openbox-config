@@ -1,4 +1,5 @@
 conky.config = {
+-- https://github.com/altinukshini/conky_blue
 -- Conky settings #
 	background = false,
 	update_interval = 1,
@@ -50,7 +51,7 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 -- Lua Load  #
-	lua_load = '~/.config/conky/clock01_rings.lua',
+	lua_load = '.config/conky/clock/clock01_rings.lua',
 	lua_draw_hook_pre = 'clock_rings',
 
 	own_window_argb_value = 0,
@@ -71,8 +72,8 @@ ${color 0ABFFF}${goto 202}${voffset 25}Battery
 #---------------------------------------------------------------------------------------------------------------------
 #						Weather
 #---------------------------------------------------------------------------------------------------------------------
-${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' /home/fh/.config/conky/weather}$color${font}${font Radio Space:size=11}${color 0ABFFF}${goto 202}${voffset 12}AARHUS
-${execi 600 bash /home/fh/.config/conky/accu_weather/rss/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' /home/fh/.config/conky/weather|awk '{print $NF}'}${font}$color
+${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ~/.config/conky/weather}$color${font}${font Radio Space:size=11}${color 0ABFFF}${goto 202}${voffset 12}AARHUS
+${execi 600 bash ~/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ~/.config/conky/weather|awk '{print $NF}'}${font}$color
 ${font caviar dreams:size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
 #---------------------------------------------------------------------------------------------------------------------
 #					           CPU usage
