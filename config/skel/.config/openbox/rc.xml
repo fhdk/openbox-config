@@ -480,6 +480,11 @@
         <command>termite -t "Termite"</command>
       </action>
     </keybind>
+    <keybind key="W-KP_Enter">
+      <action name="Execute">
+        <command>termite -t "Termite"</command>
+      </action>
+    </keybind>
     <keybind key="C-Escape">
       <action name="Execute">
         <command>lockscreen -- scrot</command>
