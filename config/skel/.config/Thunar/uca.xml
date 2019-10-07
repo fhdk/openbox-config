@@ -1,10 +1,10 @@
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<unique-id>1521317528494802-1</unique-id>
-	<command>exo-open --launch TerminalEmulator</command>
+	<command>exo-open --launch TerminalEmulator %d</command>
 	<description>Open terminal here</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -27,5 +27,14 @@
 	<patterns>*</patterns>
 	<startup-notify/>
 	<text-files/>
+</action>
+<action>
+	<icon>media-flash</icon>
+	<name>Write to USB</name>
+	<unique-id>1570439344294225-1</unique-id>
+	<command>mintstick -m iso -i %f</command>
+	<description>Write selected ISO to USB</description>
+	<patterns>*.iso</patterns>
+	<other-files/>
 </action>
 </actions>

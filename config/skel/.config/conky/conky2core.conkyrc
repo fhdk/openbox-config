@@ -41,7 +41,7 @@ conky.config = {
 
 -- Text settings #
 	use_xft = true,
-	font = 'caviar dreams:size=10',
+	font = ':size=10',
 	xftalpha = 1,
 
 	uppercase = false,
@@ -74,7 +74,7 @@ ${color 0ABFFF}${goto 202}${voffset 25}Battery
 #---------------------------------------------------------------------------------------------------------------------
 ${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ~/.config/conky/weather}$color${font}${font Radio Space:size=11}${color 0ABFFF}${goto 202}${voffset 12}AARHUS
 ${execi 600 bash ~/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ~/.config/conky/weather|awk '{print $NF}'}${font}$color
-${font caviar dreams:size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
+${font :size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
 #---------------------------------------------------------------------------------------------------------------------
 #					           CPU usage
 #---------------------------------------------------------------------------------------------------------------------
