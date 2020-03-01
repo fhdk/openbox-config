@@ -9,11 +9,11 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "400x10-20+40"
+    geometry = "400x10-20+50"
     shrink = yes
     transparency = 0
     idle_threshold = 0
-    #monitor = 0
+    monitor = 0
     follow = mouse
     sticky_history = yes
     history_length = 20
@@ -29,22 +29,25 @@
     dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/chromium
     icon_position = left
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
 
 [shortcuts]
 
+
 [urgency_low]
-    background = "#29353B"
-    foreground = "#c0c5ce"
+    background = "#282828"
+    foreground = "#2D9BD2"
+    frame_color = "#2D9BD2"
     timeout = 3
 
 [urgency_normal]
-    background = "#29353B"
-    foreground = "#c0c5ce"
+    background = "#282828"
+    foreground = "#FF8900"
+    frame_color = "#FF8900"
     timeout = 3
 
 [urgency_critical]
-    background = "#29353B"
-    foreground = "#bf616a"
-    frame_color = "#bf616a"
+    background = "#282828"
+    foreground = "#FF8900"
+    frame_color = "#FF8900"
     timeout = 5

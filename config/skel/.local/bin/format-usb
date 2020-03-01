@@ -1,0 +1,15 @@
+#!/bin/bash
+# ensure a device is given
+DEVICE="$1"
+if [[ -z ${DEVICE} ]]; then
+    echo "No device specified ..."
+    exit 1
+fi
+# Get user confirmation
+read -r -p "Confirm reformat of $1 [y/N] " resp
+if [[ "$resp" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    echo "Formatting ${DEVICE} ..."
+    printf 'o\ny\nn\n\n\n\n0700\nw\ny\n' | sudo gdisk $DEVICE && sudo mkexfatfs "$DEVICE"1
+else
+    echo "Formatting aborted"
+fi

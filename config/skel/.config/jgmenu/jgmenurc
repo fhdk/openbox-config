@@ -38,7 +38,7 @@ item_border          = 0
 
 sep_height           = 5
 
-font                 = Roboto 12px
+font                 = Roboto 14px
 #font_fallback       = xtg
 icon_size            = 24
 #icon_text_spacing   = 10
@@ -49,40 +49,23 @@ icon_size            = 24
 
 ## -------------------------------
 ## colors
-## adapta-maia
-icon_theme           = Papirus-Dark-Maia
+icon_theme           = gnome
 
-color_menu_bg        = #e0e2e3 100
-color_menu_fg        = #2b303b 100
+color_menu_bg        = #282828 100
+color_menu_fg        = #dddddd 100
 
-color_menu_border    = #e0e2e3 0
+color_menu_border    = #F5AF26 25
 
-color_norm_bg        = #e0e2e3 100
-color_norm_fg        = #2b303b 100
+color_norm_bg        = #282828 100
+color_norm_fg        = #dddddd 100
 
-color_sel_bg         = #8fa1b3 100
-color_sel_fg         = #2b303b 100
-#color_sel_border     = #e0e2e3 0
+color_sel_bg         = #820003 100
+color_sel_fg         = #F5AF26 100
+#color_sel_border     = #282828 0
 
-color_sep_fg         = #e0e2e3 0
-
-## adapta-nokto-maia
-icon_theme           = Papirus-Maia
-
-#color_menu_bg        = #222d32 100
-#color_menu_fg        = #5198BA 100
-
-#color_menu_border    = #222d32 8
-
-#color_norm_bg        = #304048 0
-#color_norm_fg        = #e0e2e3 100
-
-#color_sel_bg         = #8fa1b3 60
-#color_sel_fg         = #e0e2e3 100
-#color_sel_border     = #222d32 8
-
-#color_sep_border     = #e0e2e3 40
+color_sep_fg         = #F5AF26 25
 
 ## --------------------------------
 
 #csv_name_format     = %n (%g)
+

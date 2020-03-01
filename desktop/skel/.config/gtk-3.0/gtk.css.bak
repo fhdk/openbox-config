@@ -1,0 +1,21 @@
+.header-bar.default-decoration {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.header-bar.default-decoration .button.titlebutton {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.window-frame {
+  box-shadow: none;
+  margin: 1px;
+  border-radius: 0 0 0 0;
+}
+
+decoration {
+  border: 10px;
+  border-color: #ef0000;
+  /*color: #ef0000;*/
+}

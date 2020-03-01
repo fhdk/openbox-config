@@ -93,8 +93,8 @@ UXTerm*toolBar: false
 ! ------------------------------------------------------------------------------
 ! Rofi
 ! ------------------------------------------------------------------------------
-rofi.font: DejaVu Sans Mono Book 12
-rofi.color-enabled: true
-rofi.color-window: #2b303b, #2b303b, #2b303b
-rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #8fa1b3, #2b303b
-rofi.separator-style: solid
+!rofi.font: DejaVu Sans Mono Book 12
+!rofi.color-enabled: true
+!rofi.color-window: #2b303b, #2b303b, #2b303b
+!rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #8fa1b3, #2b303b
+!rofi.separator-style: solid

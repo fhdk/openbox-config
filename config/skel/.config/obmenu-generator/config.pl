@@ -8,53 +8,28 @@
 
 || FILTERING
     | skip_filename_re    : Skip a .desktop file if its name matches the regex.
-                            Name is from the last slash to the end. (filename.desktop)
+                            Name is from the last slash to the end. (e.g.: name.desktop)
                             Example: qr/^(?:gimp|xterm)\b/,    # skips 'gimp' and 'xterm'
 
     | skip_entry          : Skip a desktop file if the value from a given key matches the regex.
                             Example: [
-                                {key => 'Name', re => qr/(?:about|terminal)/i},
-                                {key => 'Exec', re => qr/^xterm/},
+                                {key => 'Name',       re => qr/(?:about|terminal)/i},
+                                {key => 'Exec',       re => qr/^xterm/},
+                                {key => 'OnlyShowIn', re => qr/XFCE/},
                             ],
 
-    | substitutions       : Substitute, by using a regex, in the values of the desktop files.
+    | substitutions       : Substitute, by using a regex, in the values from the desktop files.
                             Example: [
-                                {key => 'Exec', re => qr/xterm/, value => 'sakura'},
-                                {key => 'Exec', re => qr/\\\\/,  value => '\\', global => 1},    # for wine apps
+                                {key => 'Exec', re => qr/xterm/, value => 'tilix', global => 1},
                             ],
-
 
 || ICON SETTINGS
-    | icon_dirs_first     : When looking for icons, look in this directories first,
-                            before looking in the directories of the current icon theme.
-                            Example: [
-                                "$ENV{HOME}/My icons",
-                            ],
-
-    | icon_dirs_second    : Look in this directories after looked in the directories of the
-                            current icon theme. (Before /usr/share/pixmaps)
-                            Example: [
-                                "/usr/share/icons/gnome",
-                            ],
-
-    | icon_dirs_last      : Look in this directories at the very last, after looked in
-                            /usr/share/pixmaps, /usr/share/icons/hicolor and some other
-                            directories.
-                            Example: [
-                                "/usr/share/icons/Tango",
-                            ],
-
-    | strict_icon_dirs    : A true value will make the script to look only inside the directories
-                            specified by you in either one of the above three options.
-
+    | use_gtk3            : Use the Gtk3 library for resolving the icon paths. (default: 0)
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
-    | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
-
-
-|| KEYS
-    | name_keys           : Valid keys for application name.
-                            Example: ['Name[fr]', 'GenericName[fr]', 'Name'],   # french menu
-
+    | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
+    | icon_size           : Preferred size for icons. (default: 48)
+    | generic_fallback    : Try to shorten icon name at '-' characters before looking at inherited themes. (default: 0)
+    | force_icon_size     : Always get the icon scaled to the requested size. (default: 0)
 
 || PATHS
     | desktop_files_paths   : Absolute paths which contain .desktop files.
@@ -64,7 +39,6 @@
                                 glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
                               ],
 
-
 || NOTES
     | Regular expressions:
         * use qr/.../ instead of '...'
@@ -73,30 +47,35 @@
 =cut
 
 our $CONFIG = {
-    "editor" => "xed",
-    "Linux::DesktopFiles" => {
-        desktop_files_paths => [
-            "/usr/share/applications",
-            "/usr/local/share/applications",
-            "/usr/share/applications/kde4",
-            "$ENV{HOME}/.local/share/applications",
-        ],
-        gtk_rc_filename => "$ENV{HOME}/.gtkrc-2.0",
-        icon_dirs_first => undef,
-        icon_dirs_last => undef,
-        icon_dirs_second => undef,
-        keep_unknown_categories => 1,
-        skip_entry => undef,
-        skip_filename_re => undef,
-        skip_svg_icons => 0,
-        strict_icon_dirs => undef,
-        substitutions => undef,
-        terminalization_format => "%s -e '%s'",
-        terminalize => 1,
-        unknown_category_key => "other",
-    },
-    "missing_icon" => "gtk-missing-image",
-    "name_keys" => ["Name"],
-    "terminal" => "termite",
-    "VERSION" => 0.84,
+  "editor"              => "xed",
+  "force_icon_size"     => 0,
+  "generic_fallback"    => 0,
+  "gtk_rc_filename"     => "$ENV{HOME}/.gtkrc-2.0",
+  "icon_size"           => 48,
+  "Linux::DesktopFiles" => {
+                             desktop_files_paths     => [
+                                                          "/usr/share/applications",
+                                                          "/usr/local/share/applications",
+                                                          "/usr/share/applications/kde4",
+                                                          "$ENV{HOME}/.local/share/applications",
+                                                        ],
+                             gtk_rc_filename         => "$ENV{HOME}/.gtkrc-2.0",
+                             icon_dirs_first         => undef,
+                             icon_dirs_last          => undef,
+                             icon_dirs_second        => undef,
+                             keep_unknown_categories => 1,
+                             skip_entry              => undef,
+                             skip_filename_re        => undef,
+                             skip_svg_icons          => 0,
+                             strict_icon_dirs        => undef,
+                             substitutions           => undef,
+                             terminalization_format  => "%s -e '%s'",
+                             terminalize             => 1,
+                             unknown_category_key    => "other",
+                           },
+  "locale_support"      => 1,
+  "missing_icon"        => "gtk-missing-image",
+  "terminal"            => "termite",
+  "use_gtk3"            => 0,
+  "VERSION"             => 0.87,
 }

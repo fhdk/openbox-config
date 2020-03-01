@@ -88,10 +88,15 @@ test_image () {
        echo O
      ;;
     esac
-} 
+}
 
-#put your accuweather rss address here
-address="https://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|DK|124594|AARHUS"
+# PUT YOUR LOCATIONS PARAMETERS IN THE VARIABLES BELOW
+REGION_ID="EUR"
+COUNTRY_ID="DK"
+LOCATION_KEY="124594"
+LOCALIZED_NAME="AARHUS"
+
+address="https://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=${REGION_ID}|${COUNTRY_ID}|${LOCATION_KEY}|${LOCALIZED_NAME}"
 
 killall wget
 wget -O ~/.config/conky/accu_weather/weather_raw $address

@@ -1,10 +1,5 @@
-.window-frame {
-  box-shadow: solid;
-  margin: 0;
-}
-
 decoration {
-	padding: 1px;
-	border: 1px #76797f;
-	background: #76797f;
+border-width: 0.4px;
+border-color: #808080;
+border-style: solid;
 }

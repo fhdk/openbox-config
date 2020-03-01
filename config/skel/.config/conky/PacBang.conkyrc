@@ -1,0 +1,86 @@
+conky.config = {
+-- https://github.com/altinukshini/conky_blue
+-- Conky settings #
+	background = false,
+	update_interval = 1,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+--imlib_cache_size 0
+
+	temperature_unit = 'celcius',
+
+-- Window specifications #
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+
+	border_inner_margin = 0,
+	border_outer_margin = 5,
+
+	minimum_width = 250, minimum_height = 300,
+	maximum_width = 300,
+
+	alignment = 'top_right',
+	gap_x = 10,
+	gap_y = 50,
+
+-- Graphics settings #
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- Text settings #
+	use_xft = true,
+	font = ':size=10',
+	xftalpha = 1,
+
+	uppercase = false,
+
+	temperature_unit = 'celsius',
+
+	default_color = '#FFFFFF',
+
+-- Lua Load  #
+	lua_load = '.config/conky/clock/pacbang_rings.lua',
+	lua_draw_hook_pre = 'clock_rings',
+
+	own_window_argb_value = 0,
+	own_window_argb_visual = false,
+	own_window_colour = '#000000',
+};
+
+conky.text = [[
+#---------------------------------------------------------------------------------------------
+#					         Time and date
+#---------------------------------------------------------------------------------------------
+${voffset 7}${font Radio Space:size=16}${color B24C4C}${time %A}${font}$color${font Radio Space:size=38}${goto 167}${voffset -8} ${time %e}${font}
+${font Radio Space:size=18}${voffset -30}${time %b}${font}${voffset -3} ${font Radio Space:size=20}${time %Y}${font}${color B24C4C} ${hr 1}
+#---------------------------------------------------------------------------------------------
+#					         Battery Circle
+#---------------------------------------------------------------------------------------------
+${color FFFFFF}${goto 209}${voffset 34}${battery_percent}%
+${color B24C4C}${goto 202}${voffset 25}Battery
+#---------------------------------------------------------------------------------------------
+#						Weather
+#---------------------------------------------------------------------------------------------
+${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ~/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B24C4C}${goto 202}${voffset 12}AARHUS
+${execi 600 bash ~/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ~/.config/conky/weather|awk '{print $NF}'}${font}$color
+${font :size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
+#---------------------------------------------------------------------------------------------
+#					     Computer info
+#---------------------------------------------------------------------------------------------
+${color B24C4C}${voffset 2}${hr 1}${voffset 5}
+${color B24C4C}Hostname:$color${alignr}${nodename}
+${color B24C4C}OS:$color${alignr}${exec "lsb_release -d | awk '{print $2" "$3}'"} $machine
+${color B24C4C}Kernel:$color${alignr}${kernel}$color
+]];
