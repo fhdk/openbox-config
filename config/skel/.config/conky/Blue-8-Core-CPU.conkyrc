@@ -51,7 +51,7 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 -- Lua Load  #
-	lua_load = '.config/conky/clock/clock08_rings.lua',
+	lua_load = '.config/conky/clock/pacbang-clock04_rings.lua',
 	lua_draw_hook_pre = 'clock_rings',
 
 	own_window_argb_value = 0,
@@ -59,11 +59,10 @@ conky.config = {
 	own_window_colour = '#000000',
 -- location
 	template0 = 'AARHUS',
--- ethernet / primary network
-	template1 = 'eno1'
+-- ethernet
+	template1 = 'eno1',
 -- wireless
 	template2 = ''
-
 };
 
 conky.text = [[
