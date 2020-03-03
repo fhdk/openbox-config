@@ -27,4 +27,4 @@ monitor-fallback =
 
 modules-left   = jgmenu workspaces
 modules-center =  window_switch clock
-modules-right  = wired_network wireless_network pkg battery memory temperature coreuse alsa
+modules-right  = wired_network wireless_network pkg battery memory thermal0 thermal1 thermal2 coreuse alsa
