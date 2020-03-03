@@ -25,6 +25,6 @@ monitor-fallback =
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-modules-left   = jgmenu workspaces
-modules-center =  window_switch clock
-modules-right  = wired_network wireless_network pkg battery memory thermal0 thermal1 thermal2 coreuse alsa
+modules-left   = jgmenu workspaces window_switch
+modules-center = 
+modules-right  = wired_network wireless_network pkg battery memory thermal0 thermal1 thermal2 coreuse alsa clock
