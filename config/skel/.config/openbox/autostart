@@ -46,4 +46,4 @@ xdg-user-dirs-gtk-update &
 
 ### enable numlock
 ### uncomment next line
-numlockx &
+#numlockx &
