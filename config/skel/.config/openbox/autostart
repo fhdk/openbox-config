@@ -23,7 +23,7 @@ thunar --daemon &
 ### uncomment next line and comment pcmanfm above
 sleep 1; nitrogen --restore &
 
-sleep 1; manjaro-polybar-session &
+sleep 1; polybar -c ~/.config/polybar/config &
 sleep 1; manjaro-tint2-session &
 
 ### launch conky
