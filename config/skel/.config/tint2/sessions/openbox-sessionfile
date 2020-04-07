@@ -5,4 +5,4 @@
 
 # manjaro-tint2-session &
 
-/home/fh/.config/tint2/tint2rc
+$HOME/.config/tint2/tint2rc
