@@ -13,7 +13,7 @@ sleep 1; manjaro-compositor --start &
 
 ### launch thunar in daemon mode for faster startup
 ### comment if you would rather use pcmanfm
-thunar --daemon &
+#thunar --daemon &
 
 ### use desktop icons and pcmanfm as wallpaper manager
 ### uncomment next line and comment nitrogen below
@@ -39,7 +39,7 @@ skippy-xd --config ~/.config/skippy-xd/skippy-xd.rc --start-daemon &
 xcape -e 'Super_L=Alt_L|F1' &
 
 ### PolicyKit authentication
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/lxpolkit &
 
 ### Localize user system folders
 xdg-user-dirs-gtk-update &
