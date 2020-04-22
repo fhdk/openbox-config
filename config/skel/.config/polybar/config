@@ -16,7 +16,7 @@ inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 ; primary monitor '$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)'
-monitor = HDMI1
+monitor = 
 monitor-fallback = 
 
 ;tray-position = center
