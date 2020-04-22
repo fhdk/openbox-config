@@ -51,18 +51,19 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 -- Lua Load  #
-	lua_load = '.config/conky/clock/pacbang-clock04_rings.lua',
+	lua_load = '~/.config/conky/clock/pacbang-clock-cpu2.lua',
 	lua_draw_hook_pre = 'clock_rings',
 
 	own_window_argb_value = 0,
 	own_window_argb_visual = false,
 	own_window_colour = '#000000',
 -- location
-	template0 = 'AARHUS',
+	template0 = 'LINUX AARHUS',
 -- ethernet
 	template1 = 'eno1',
 -- wireless
-	template2 = ''
+	template2 = '',
+
 };
 
 conky.text = [[
@@ -79,24 +80,18 @@ ${color B90004}${goto 202}${voffset 25}Battery
 #---------------------------------------------------------------------------------------------------------------------
 #						Weather
 #---------------------------------------------------------------------------------------------------------------------
-${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ${HOME}/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B90004}${goto 202}${voffset 12}${template0}
+${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ${HOME}/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B90004}${goto 155}${voffset 12}${template0}
 ${execi 600 bash ${HOME}/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ${HOME}/.config/conky/accu_weather/weather|awk '{print $NF}'}${font}$color
 ${font :size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
 #---------------------------------------------------------------------------------------------------------------------
 #					    CPU usage
 #---------------------------------------------------------------------------------------------------------------------
 ${color #B90004}${hr 1}$color
-${goto 9}${voffset 35}${cpu cpu0}% ${color B90004}${goto 9}${voffset 12}CPU0 $color
-${goto 70}${voffset -25}${cpu cpu1}% ${color B90004}${goto 70}${voffset 12}CPU1 $color
-${goto 130}${voffset -25}${cpu cpu2}% ${color B90004}${goto 130}${voffset 12}CPU2 $color
-${goto 190}${voffset -25}${cpu cpu3}% ${color B90004}${goto 190}${voffset 12}CPU3 $color
-${goto 9}${voffset 37}${cpu cpu4}% ${color B90004}${goto 9}${voffset 12}CPU4 $color
-${goto 70}${voffset -25}${cpu cpu5}% ${color B90004}${goto 70}${voffset 12}CPU5 $color
-${goto 130}${voffset -25}${cpu cpu6}% ${color B90004}${goto 130}${voffset 12}CPU6 $color
-${goto 190}${voffset -25}${cpu cpu7}% ${color B90004}${goto 190}${voffset 12}CPU7 $color
-${voffset 10}${color #B90004}Temp: $color ${acpitemp}°C  ${goto 150}${color #B90004}Freq:$color ${freq}MHz
-${color #B90004}Processes:$color $processes ${goto 150}${color #B90004}Running proc: $color  $running_processes
-${color #B90004}Load:$color ${loadavg}
+${color #B90004}${voffset 6}Temp: $color ${acpitemp}°C
+${color #B90004}${voffset 6}Processes:$color $processes
+${color #B90004}${voffset 6}Running: $color  $running_processes${goto 116}${voffset 8}${cpu cpu0}% ${color B90004}${goto 116}${voffset 13}CPU1$color${goto 191}${voffset -12}${cpu cpu1}% ${color B90004}${goto 191}${voffset 12}CPU2$color
+${color #B90004}${voffset -12}FREQ:$color ${freq}MHz
+${color #B90004}${voffset 6}Load:$color ${loadavg}
 #---------------------------------------------------------------------------------------------------------------------
 #						Network
 #---------------------------------------------------------------------------------------------------------------------
@@ -104,7 +99,7 @@ ${color B90004}${voffset 2}${hr 1}
 ${color B90004}${voffset 5}Hostname $color$alignr$nodename
 ${color B90004}WLAN $color$alignr${addr ${template2}}
 ${color B90004}LAN $color$alignr${addr ${template1}}
-${color B90004}WAN $color${alignr}${execi 10 ${HOME}/.config/conky/scripts/myip}
+${color B90004}WAN $color${alignr}${execi 10 curl -s https://get.geojs.io/v1/ip}
 ${color B90004}${alignc}Traffic$color
 ${color #B90004}Down $color${downspeed ${template1}} k/s ${alignr}${color #B90004}Up$color ${upspeed ${template1}} k/s
 ${downspeedgraph ${template1} 30,120 000000 B90004} ${alignr}${upspeedgraph ${template1} 30,120 000000 B90004}$color
@@ -116,7 +111,7 @@ ${color B90004}${voffset 2}${hr 1}
 ${color FFFFFF}${goto 7}${voffset 39}${fs_used_perc /}%
 ${color B90004}${goto 7}DISK
 ${color FFFFFF}${goto 102}${voffset -27}${memperc}%
-${color B90004}${goto 102}RAM
+${color B90004}${goto 10 2}RAM
 ${color FFFFFF}${goto 192}${voffset -26}${swapperc}%
 ${color B90004}${goto 191}SWAP
 #---------------------------------------------------------------------------------------------------------------------

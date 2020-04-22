@@ -14,10 +14,9 @@ include-file = $HOME/.config/polybar/modules.conf
 [bar/openbox-bar]
 inherit = bar/master
 
-; $ polybar -m | cut -d ':' -f 1
-; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-; $ xrandr -q | grep " connected primary" | cut -d ' ' -f1
-monitor = 
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; primary monitor '$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)'
+monitor = HDMI1
 monitor-fallback = 
 
 ;tray-position = center
@@ -27,4 +26,4 @@ monitor-fallback =
 
 modules-left   = jgmenu workspaces window_switch
 modules-center = 
-modules-right  = wired_network wireless_network pkg battery memory thermal0 thermal1 thermal2 coreuse alsa clock
+modules-right  = wired_network wireless_network pkg battery memory thermal0 thermal1 thermal2 coreuse clock

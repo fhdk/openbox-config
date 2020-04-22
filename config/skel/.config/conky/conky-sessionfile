@@ -1,1 +1,1 @@
-conky -c $HOME/.config/conky/PacBang-4-Core-CPU.conkyrc & sleep 0.5
+conky -c $HOME/.config/conky/PacBang-Clock-Sys.conkyrc & sleep 0.5

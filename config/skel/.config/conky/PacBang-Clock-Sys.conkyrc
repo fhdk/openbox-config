@@ -51,19 +51,18 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 -- Lua Load  #
-	lua_load = '.config/conky/clock/pacbang-clock02_rings.lua',
+	lua_load = '~/.config/conky/clock/pacbang-clock-sys.lua',
 	lua_draw_hook_pre = 'clock_rings',
 
 	own_window_argb_value = 0,
 	own_window_argb_visual = false,
 	own_window_colour = '#000000',
 -- location
-	template0 = 'AARHUS',
+	template0 = 'LINUX AARHUS',
 -- ethernet
-	template1 = 'eno1'
+	template1 = 'eno1',
 -- wireless
-	template2 = ''
-
+	template2 = 'wlp0s20u4u2u1',
 };
 
 conky.text = [[
@@ -75,35 +74,14 @@ ${font Radio Space:size=18}${voffset -30}${time %b}${font}${voffset -3} ${font R
 #---------------------------------------------------------------------------------------------------------------------
 #					    Battery Circle
 #---------------------------------------------------------------------------------------------------------------------
-${color FFFFFF}${goto 209}${voffset 34}${battery_percent}%
-${color B90004}${goto 202}${voffset 25}Battery
+${goto 209}${voffset 34}${if_match ${battery_percent} != 0}${color FFFFFF}${battery_percent}%${endif}
+${goto 202}${voffset 25}${if_match ${battery_percent} != 0}${color B90004}Battery${endif}
 #---------------------------------------------------------------------------------------------------------------------
 #						Weather
 #---------------------------------------------------------------------------------------------------------------------
-${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ${HOME}/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B90004}${goto 202}${voffset 12}${template0}
+${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ${HOME}/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B90004}${goto 155}${voffset 12}${template0}
 ${execi 600 bash ${HOME}/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ${HOME}/.config/conky/accu_weather/weather|awk '{print $NF}'}${font}$color
 ${font :size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
-#---------------------------------------------------------------------------------------------------------------------
-#					    CPU usage
-#---------------------------------------------------------------------------------------------------------------------
-${color #B90004}${hr 1}$color
-${color #B90004}${voffset 6}Temp: $color ${acpitemp}°C
-${color #B90004}${voffset 6}Processes:$color $processes
-${color #B90004}${voffset 6}Running: $color  $running_processes${goto 116}${voffset 8}${cpu cpu0}% ${color B90004}${goto 116}${voffset 13}CPU1$color${goto 191}${voffset -12}${cpu cpu1}% ${color B90004}${goto 191}${voffset 12}CPU2$color
-${color #B90004}${voffset -12}FREQ:$color ${freq}MHz
-${color #B90004}${voffset 6}Load:$color ${loadavg}
-#---------------------------------------------------------------------------------------------------------------------
-#						Network
-#---------------------------------------------------------------------------------------------------------------------
-${color B90004}${voffset 2}${hr 1}
-${color B90004}${voffset 5}Hostname $color$alignr$nodename
-${color B90004}WLAN $color$alignr${addr ${template2}}
-${color B90004}LAN $color$alignr${addr ${template1}}
-${color B90004}WAN $color${alignr}${execi 10 ${HOME}/.config/conky/scripts/myip}
-${color B90004}${alignc}Traffic$color
-${color #B90004}Down $color${downspeed ${template1}} k/s ${alignr}${color #B90004}Up$color ${upspeed ${template1}} k/s
-${downspeedgraph ${template1} 30,120 000000 B90004} ${alignr}${upspeedgraph ${template1} 30,120 000000 B90004}$color
-${color #B90004}Total$color ${totaldown ${template1}} ${alignr}${color #B90004}Total:$color ${totalup ${template1}}
 #---------------------------------------------------------------------------------------------------------------------
 #					    DISK/RAM/SWAP usage
 #---------------------------------------------------------------------------------------------------------------------
@@ -111,33 +89,37 @@ ${color B90004}${voffset 2}${hr 1}
 ${color FFFFFF}${goto 7}${voffset 39}${fs_used_perc /}%
 ${color B90004}${goto 7}DISK
 ${color FFFFFF}${goto 102}${voffset -27}${memperc}%
-${color B90004}${goto 10 2}RAM
+${color B90004}${goto 102}RAM
 ${color FFFFFF}${goto 192}${voffset -26}${swapperc}%
 ${color B90004}${goto 191}SWAP
 #---------------------------------------------------------------------------------------------------------------------
-#					    Running processes
-#---------------------------------------------------------------------------------------------------------------------
-${color B90004}${voffset 2} ${hr 1}
-${color #B90004}${voffset 5}NAME${goto 122}PID${goto 163}CPU%${goto 210}MEM%$color${voffset 5}
-${top name 1}${goto 115}${top pid 1}${goto 160}${top cpu 1}${goto 205}${top mem 1}
-${top name 2}${goto 115}${top pid 2}${goto 160}${top cpu 2}${goto 205}${top mem 2}
-${top name 3}${goto 115}${top pid 3}${goto 160}${top cpu 3}${goto 205}${top mem 3}
-${top name 5}${goto 115}${top pid 5}${goto 160}${top cpu 5}${goto 205}${top mem 5}
-${top name 6}${goto 115}${top pid 6}${goto 160}${top cpu 6}${goto 205}${top mem 6}
-${top name 7}${goto 115}${top pid 7}${goto 160}${top cpu 7}${goto 205}${top mem 7}
-${top name 8}${goto 115}${top pid 8}${goto 160}${top cpu 8}${goto 205}${top mem 8}
-#---------------------------------------------------------------------------------------------------------------------
 #					    Computer info
 #---------------------------------------------------------------------------------------------------------------------
-${color B90004}${voffset 2}${hr 1}${voffset 5}
-${color B90004}Hostname:$color${alignr}${nodename}
+${color B90004}${voffset 2}${hr 1}${voffset 1}
+${color B90004}${voffset 5}H0STNAME $color$alignr$nodename
 ${color B90004}OS:$color${alignr}${exec "lsb_release -d | awk '{print $2" "$3}'"} $machine
-${color B90004}Kernel:$color${alignr}${kernel}$color
+${color B90004}KERNEL:$color${alignr}${kernel}$color
 #---------------------------------------------------------------------------------------------------------------------
-#						Logging
+#						Network
 #---------------------------------------------------------------------------------------------------------------------
-#${color B90004}${voffset 2}${hr 1}$color
-#${color B90004}${alignc}SYSLOG:$color
-#${color B90004}${voffset -5}${hr 1}$color
-#${voffset 5}${execi 10 tail -n6 /var/log/syslog | awk '{print " ",$5,$6,$7,$8,$9,$10}' | fold -w40}
+${color B90004}${voffset 2}${hr 1}${voffset 1}$color
+${color B90004}PUBLIC IP${color}${alignr}${execi 10 curl -s https://get.geojs.io/v1/ip}
+${if_existing /proc/net/route ${template1}}
+${alignc}WIRED
+${color B90004}LOCAL IP:${color} ${alignr}${addr ${template1}}
+${color B90004}UP:${color} ${alignc}${upspeed ${template1}} kb/s ${alignr}${upspeedgraph ${template1} 8,60 789E2D A7CC5C}
+${color B90004}DOWN:${color} ${alignc}${downspeed ${template1}} kb/s ${alignr}${downspeedgraph ${template1} 8,60 789E2D A7CC5C}
+${color B90004}UPLOAD:${color} ${alignr}${totalup ${template1}}
+${color B90004}DOWNLOAD:${color} ${alignr}${totaldown ${template1}}
+${endif}
+${if_existing /proc/net/route ${template2}}
+${alignc}WIRELESS
+${color B90004}LOCAL IP:${color} ${alignr}${addr ${template2}}
+${color B90004}SIGNAL:${color} ${wireless_link_qual ${template2}}% ${alignr}${wireless_link_bar 8,60 ${template2}}
+${color B90004}SSID:${color}${alignr}${wireless_essid ${template2}} 
+${color B90004}UP:${color} ${alignc}${upspeed ${template2}} kb/s ${alignr}${upspeedgraph ${template2} 8,60 789E2D A7CC5C}
+${color B90004}DOWN:${color} ${alignc}${downspeed ${template2}} kb/s ${alignr}${downspeedgraph ${template2} 8,60 789E2D A7CC5C}
+${color B90004}UPLOAD:${color} ${alignr}${totalup ${template2}}
+${color B90004}DOWNLOAD:${color} ${alignr}${totaldown ${template2}}
+${endif}
 ]];

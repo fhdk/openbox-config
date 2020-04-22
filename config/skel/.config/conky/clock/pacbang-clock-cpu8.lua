@@ -63,7 +63,7 @@ settings_table = {
         -- "start_angle" is the starting angle of the ring, in degrees, clockwise from top. Value can be either positive or negative.
         start_angle=0,
         -- "end_angle" is the ending angle of the ring, in degrees, clockwise from top. Value can be either positive or negative, but must be larger than start_angle.
-        end_angle=360
+        end_angle=360,
     },
 
     {
@@ -78,7 +78,7 @@ settings_table = {
         radius=27,
         thickness=5,
         start_angle=-90,
-        end_angle=270
+        end_angle=270,
     },
 
     {
@@ -93,7 +93,7 @@ settings_table = {
         radius=66,
         thickness=5,
         start_angle=0,
-        end_angle=360
+        end_angle=360,
     },
     {
         name='time',
@@ -107,7 +107,7 @@ settings_table = {
         radius=72,
         thickness=5,
         start_angle=0,
-        end_angle=360
+        end_angle=360,
     },
     {
         name='time',
@@ -121,7 +121,7 @@ settings_table = {
         radius=80,
         thickness=5,
         start_angle=-90,
-        end_angle=90
+        end_angle=90,
     },
     {
         name='time',
@@ -135,7 +135,7 @@ settings_table = {
         radius=86,
         thickness=5,
         start_angle=-90,
-        end_angle=90
+        end_angle=90,
     },
     {
         name='cpu',
@@ -145,7 +145,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=39, y=328,
+        x=39, y=325,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -159,7 +159,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=99, y=328,
+        x=99, y=325,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -173,7 +173,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=159, y=328,
+        x=159, y=325,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -187,7 +187,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=220, y=328,
+        x=220, y=325,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -201,7 +201,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=39, y=390,
+        x=39, y=387,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -215,7 +215,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=99, y=390,
+        x=99, y=387,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -229,7 +229,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=159, y=390,
+        x=159, y=387,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -243,7 +243,7 @@ settings_table = {
         bg_alpha=0.3,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=220, y=390,
+        x=220, y=387,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -257,7 +257,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=35, y=673,
+        x=35, y=670,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -271,7 +271,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=130, y=673,
+        x=130, y=670,
         radius=25,
         thickness=5,
         start_angle=-90,
@@ -285,7 +285,7 @@ settings_table = {
         bg_alpha=0.2,
         fg_colour=0xB90004,
         fg_alpha=0.8,
-        x=220, y=673,
+        x=220, y=670,
         radius=25,
         thickness=5,
         start_angle=-90,

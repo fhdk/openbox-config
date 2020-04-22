@@ -51,12 +51,18 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 -- Lua Load  #
-	lua_load = '.config/conky/clock/pacbang_rings.lua',
+	lua_load = '~/.config/conky/clock/pacbang_clock.lua',
 	lua_draw_hook_pre = 'clock_rings',
 
 	own_window_argb_value = 0,
 	own_window_argb_visual = false,
 	own_window_colour = '#000000',
+-- location
+	template0 = 'LINUX AARHUS',
+-- ethernet
+	template1 = 'eno1',
+-- wireless
+	template2 = '',
 };
 
 conky.text = [[
@@ -73,7 +79,7 @@ ${color B24C4C}${goto 202}${voffset 25}Battery
 #---------------------------------------------------------------------------------------------
 #						Weather
 #---------------------------------------------------------------------------------------------
-${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ~/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B24C4C}${goto 202}${voffset 12}AARHUS
+${font conkyweather:size=35}${color FFFFFF}${goto 200}${voffset 20}${execpi 6000  sed -n '2p' ~/.config/conky/accu_weather/weather}$color${font}${font Radio Space:size=11}${color B24C4C}${goto 155}${voffset 12}${template0}
 ${execi 600 bash ~/.config/conky/accu_weather/acc_rss}${font Radio Space:size=15}${goto 201}${voffset -4}${execpi 600 sed -n '1p' ~/.config/conky/weather|awk '{print $NF}'}${font}$color
 ${font :size=8}${goto 47}${voffset 5}Uptime: ${uptime_short}
 #---------------------------------------------------------------------------------------------
