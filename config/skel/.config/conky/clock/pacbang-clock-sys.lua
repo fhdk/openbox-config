@@ -280,6 +280,9 @@ function conky_clock_rings()
         str=conky_parse(str)
 
         value=tonumber(str)
+        if value == 0 and pt['name'] == 'battery_percent' then
+     	    pt['bg_alpha'] = 0
+        end
         pct=value/pt['max']
 
         draw_ring(cr, pct, pt)
@@ -297,6 +300,7 @@ function conky_clock_rings()
 
     if update_num>5 then
         for i in pairs(settings_table) do
+
             setup_rings(cr, settings_table[i])
         end
     end

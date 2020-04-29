@@ -282,6 +282,9 @@ function conky_clock_rings()
         str=conky_parse(str)
 
         value=tonumber(str)
+        if value == 0 and pt['name'] == 'battery_percent' then
+            pt['bg_alpha'] = 0
+        end        
         pct=value/pt['max']
 
         draw_ring(cr,pct,pt)

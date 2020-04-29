@@ -74,8 +74,8 @@ ${font Radio Space:size=18}${voffset -30}${time %b}${font}${voffset -3} ${font R
 #---------------------------------------------------------------------------------------------
 #					         Battery Circle
 #---------------------------------------------------------------------------------------------
-${color FFFFFF}${goto 209}${voffset 34}${battery_percent}%
-${color B24C4C}${goto 202}${voffset 25}Battery
+${goto 209}${voffset 34}${if_match ${battery_percent} != 0}${color FFFFFF}${battery_percent}%${endif}
+${goto 202}${voffset 25}${if_match ${battery_percent} != 0}${color B90004}Battery${endif}
 #---------------------------------------------------------------------------------------------
 #						Weather
 #---------------------------------------------------------------------------------------------
