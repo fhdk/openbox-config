@@ -1,0 +1,57 @@
+#!/usr/bin/bash
+
+### Help 
+Help() {
+    echo
+    echo "Use fzf to search and install with Pacman and Yay"
+    echo "Defaults to Pacman if no options passed"
+    echo
+    echo "Syntax: fpf -[y|h]"
+    echo
+    echo "options:"
+    echo
+    echo "y     Search and install with Yay"
+    echo
+    echo "h     Print this help screen."
+    echo
+}
+
+### Manjaro Repo
+#Get Manjaro package list, sort, mark installed, preview infos and finally hand off to pacman for install
+Mrepo() {
+	echo "Setting things up..."
+	sort <(comm -23 <(pacman -Slq | sort) <(pacman -Qq | sort)) <(comm -12 <(pacman -Slq | sort) <(pacman -Qq | sort) | awk '{print $0" *"}') > /tmp/packages
+	cat /tmp/packages |fzf -e -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' --preview-window=wrap --layout=reverse --marker='>>' --header="Select packages to install (use TAB to toggle selection)" --info=hidden | xargs -ro sudo pacman -S
+}
+
+### AUR Repo
+#Get AUR package database, remove unwanted lines, sort, mark installed, preview infos and finally hand off to yay for install
+Arepo() {
+	wget -P /tmp/aur/ https://aur.archlinux.org/packages.gz >/dev/null 2>&1 && gunzip -f /tmp/aur/packages.gz
+	echo "$(tail -n +2 /tmp/aur/packages)" > /tmp/aur/packages
+	sort <(comm -23 <(sort /tmp/aur/packages) <(pacman -Qq | sort)) <(comm -12 <(sort /tmp/aur/packages) <(pacman -Qq | sort) | awk '{print $0" *"}') > /tmp/aur_packages
+	cat /tmp/aur_packages | fzf -e -m --preview  'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' --preview-window=wrap --layout=reverse --marker='>>' --header="Select packages to install (use TAB to toggle selection)" --info=hidden | xargs -ro yay -S
+}
+
+### MAIN
+
+#   Test for AUR option, if not run with pacman
+if [[ -z "$1" ]]; then
+	Mrepo
+else
+	for opt in "$@"; do
+		case $opt in
+		-y|--yay)
+			echo -e "Syncing AUR package database..."
+			Arepo
+			;;
+		-h|--help) #Usage // Help
+			Help
+			;;
+		-*) #Error catching
+			echo "Invalid Usage"
+			Help
+			;;
+		esac
+	done
+fi

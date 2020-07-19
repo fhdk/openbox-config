@@ -146,7 +146,7 @@
 	<separator label="Manjaro Openbox"/>
 	<item label="Terminal">
 		<action name="Execute">
-			<command>termite -t "Termite"</command>
+			<command>termite  -t "Terminal"</command>
 		</action>
 	</item>
 	<item label="File Manager">

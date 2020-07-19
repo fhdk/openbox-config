@@ -1,0 +1,20 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"Conky.tmLanguage",
+		"GMod Lua",
+		"Package Control",
+		"Predawn",
+		"Pretty JSON",
+		"RemoveDuplicateLines",
+		"Theme - Gravity",
+		"Theme - Monokai Pro",
+		"Theme - Soda",
+		"TrailingSpaces"
+	]
+}

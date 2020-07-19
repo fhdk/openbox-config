@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/Predawn/predawn.tmTheme",
+	"font_face": "Hack",
+	"font_size": 11,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"ignored_packages":
+	[
+		"Lua",
+		"Vintage"
+	],
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"save_on_focus_lost": true,
+	"auto_complete_commit_on_tab": true,
+}

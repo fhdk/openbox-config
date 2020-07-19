@@ -62,7 +62,7 @@ conky.config = {
 -- ethernet
 	template1 = 'eno1',
 -- wireless
-	template2 = 'wlp0s20u7',
+	template2 = 'wlan0',
 };
 
 conky.text = [[

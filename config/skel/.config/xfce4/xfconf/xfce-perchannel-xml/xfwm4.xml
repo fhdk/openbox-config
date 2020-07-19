@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfwm4" version="1.0">
+  <property name="general" type="empty">
+    <property name="workspace_names" type="array">
+      <value type="string" value="Home"/>
+      <value type="string" value="Web"/>
+      <value type="string" value="Files"/>
+      <value type="string" value="Pictures"/>
+      <value type="string" value="Documents"/>
+      <value type="string" value="Develop"/>
+      <value type="string" value="Terminal"/>
+    </property>
+    <property name="workspace_count" type="int" value="7"/>
+  </property>
+</channel>

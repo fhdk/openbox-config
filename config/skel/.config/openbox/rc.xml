@@ -36,14 +36,14 @@
       <slant>Italic</slant>
     </font>
     <font place="MenuHeader">
-      <name>Roboto</name>
-      <size>11</size>
+      <name>Roboto Medium</name>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>Roboto</name>
-      <size>10</size>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -459,7 +459,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>termite -t "Termite"</command>
+        <command>exo-open --launch TerminalEmulator</command>
       </action>
     </keybind>
     <keybind key="W-w">
@@ -494,12 +494,12 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>termite -t "Termite"</command>
+        <command>exo-open --launch TerminalEmulator</command>
       </action>
     </keybind>
     <keybind key="W-KP_Enter">
       <action name="Execute">
-        <command>termite -t "Termite"</command>
+        <command>exo-open --launch TerminalEmulator</command>
       </action>
     </keybind>
     <keybind key="C-Escape">
@@ -941,11 +941,5 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="oblogout">
-      <position force="no">
-        <monitor>1</monitor>
-      </position>
-      <fullscreen>yes</fullscreen>
-    </application>
   </applications>
 </openbox_config>

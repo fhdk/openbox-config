@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# your personal APPID
+APPID='1ef2501d7d9df74e60d51df699c27a03'
+if [[ -z "${APPID}" ]]; then
+    echo "OpenWeather api key missing"
+    echo "https://home.openweathermap.org/users/sign_up"
+    echo ""
+    exit 1
+fi
+# modify to match your location
+zip='8230'      # https://openweathermap.org/current#zip
+country='dk'
+lang='da'       # https://openweathermap.org/current#multi
+units='metric'  # https://openweathermap.org/current#data
+# fetch data
+curl -o weather.json "https://api.openweathermap.org/data/2.5/weather?zip=${zip},${country}&lang=${lang}&units=${units}&appid=${APPID}" && cat weather.json
+

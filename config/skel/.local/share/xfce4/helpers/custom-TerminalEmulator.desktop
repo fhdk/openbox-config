@@ -5,7 +5,8 @@ Encoding=UTF-8
 Type=X-XFCE-Helper
 X-XFCE-Category=TerminalEmulator
 X-XFCE-CommandsWithParameter=termite "%s"
-Icon=utilities-terminal
-Name=Termite
+Icon=termite
+Name=termite
 X-XFCE-Commands=termite
-GenericName=Termite
+GenericName=Alacritty
+

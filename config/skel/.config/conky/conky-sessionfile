@@ -1,1 +1,1 @@
-conky -c $HOME/.config/conky/PacBang-Clock-Sys.conkyrc & sleep 0.5
+conky -c /home/fh/.config/conky/KvFlatRed.conkyrc & sleep 0.5

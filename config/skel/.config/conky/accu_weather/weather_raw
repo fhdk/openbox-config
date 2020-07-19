@@ -7,7 +7,7 @@
 		<description>AccuWeather.com Forecast &amp; Current Conditions</description>
 		<ttl>60</ttl>
 		<copyright>Copyright 2020, AccuWeather, Inc., All rights reserved. For personal use only.</copyright>
-		<pubDate>Wed, 22 Apr 2020 08:27:09 GMT</pubDate> 
+		<pubDate>Sun, 19 Jul 2020 05:42:11 GMT</pubDate> 
 		<language>en-us</language> 
 		<image>
 			<title>Aarhus, DK - AccuWeather.com Forecast</title>
@@ -19,38 +19,38 @@
 			<height>19</height>
 		</image>		
 		<item>
-			<title>Currently: Sunny: 11C</title> 
+			<title>Currently: Cloudy: 16C</title> 
 			<link>http://www.accuweather.com</link>
 			<guid isPermaLink="false">http://www.accuweather.com</guid>
 			
-				<description>Currently in Aarhus, DK: 11 &#176;C and Sunny
-				&lt;img src="http://vortex.accuweather.com/phoenix2/images/common/icons/01_31x31.gif"&gt;
+				<description>Currently in Aarhus, DK: 16 &#176;C and Cloudy
+				&lt;img src="http://vortex.accuweather.com/phoenix2/images/common/icons/07_31x31.gif"&gt;
 				</description> 				
 			
-			<pubDate>Wed, 22 Apr 2020 08:27:09 GMT</pubDate>
+			<pubDate>Sun, 19 Jul 2020 05:42:11 GMT</pubDate>
 		</item>
 		
 			<item>
-				<title>4/22/2020 Forecast</title>
+				<title>7/19/2020 Forecast</title>
 				<link>http://www.accuweather.com/get/weather?locationid=124594&amp;day=1</link> 
 				<guid isPermaLink="false">http://www.accuweather.com/get/weather?locationid=124594&amp;day=1</guid>
-				<description>High: 17 C Low: 2 C Sunny and pleasant &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/01_31x31.gif" &gt;</description>
-				<pubDate>Wed, 22 Apr 2020 08:27:09 GMT</pubDate>
+				<description>High: 22 C Low: 12 C Mostly cloudy with a t-storm &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/15_31x31.gif" &gt;</description>
+				<pubDate>Sun, 19 Jul 2020 05:42:11 GMT</pubDate>
 			</item>
 		
 			<item>
-				<title>4/23/2020 Forecast</title>
+				<title>7/20/2020 Forecast</title>
 				<link>http://www.accuweather.com/get/weather?locationid=124594&amp;day=2</link> 
 				<guid isPermaLink="false">http://www.accuweather.com/get/weather?locationid=124594&amp;day=2</guid>
-				<description>High: 19 C Low: 6 C Mild with some sun &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/04_31x31.gif" &gt;</description>
-				<pubDate>Wed, 22 Apr 2020 08:27:09 GMT</pubDate>
+				<description>High: 18 C Low: 11 C Partly sunny &lt;img src="https://vortex.accuweather.com/phoenix2/images/common/icons/04_31x31.gif" &gt;</description>
+				<pubDate>Sun, 19 Jul 2020 05:42:11 GMT</pubDate>
 			</item>
 		<item>
 <title>The AccuWeather.com RSS Center</title>
 <description>To discover additional weather feeds, visit the AccuWeather.com RSS Center at http://www.accuweather.com/en/downloads</description>
 <link>http://www.accuweather.com/en/downloads</link>
 <guid isPermaLink="false">http://www.accuweather.com/en/downloads</guid>
-<pubDate>Wed, 22 Apr 2020 08:27:09 GMT</pubDate>
+<pubDate>Sun, 19 Jul 2020 05:42:11 GMT</pubDate>
 </item>
 </channel>
 </rss>
