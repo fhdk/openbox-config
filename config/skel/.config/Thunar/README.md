@@ -1,5 +1,5 @@
-
-
+## Thunar custom actions
+### Open terminal here
 ```
 <action>
     <icon>utilities-terminal</icon>
@@ -11,21 +11,24 @@
     <directories/>
 </action>
 ```
-
+### Thunar as root
+Requires `gvfs`
 ```
 <action>
-    <icon>krusader_root</icon>
+    <icon>nix-root-console</icon>
     <name>Open Thunar as ROOT</name>
     <unique-id>1521317741628820-3</unique-id>
-    <command>gksu thunar </command>
+    <command>thunar admin:%D</command>
     <description>Opening Thunar as ROOT</description>
     <patterns>*</patterns>
     <directories/>
 </action>
 ```
+### Edit file as root
+Requires `gvfs`
 ```
 <action>
-    <icon>edit-bomb</icon>
+    <icon>nix-root-edit</icon>
     <name>Edit file as ROOT</name>
     <unique-id>1538658921535571-1</unique-id>
     <command>xed admin:%f</command>
@@ -35,6 +38,8 @@
     <text-files/>
 </action>
 ```
+### Write ISO to USB
+Requires `mintstick`
 ```
 <action>
     <icon>media-flash</icon>
@@ -46,6 +51,8 @@
     <other-files/>
 </action>
 ```
+### Download subtitles for movie
+Requires `zenity` and `periscope-git` (AUR)
 ```
 <action>
     <icon>emblem-web</icon>
@@ -57,12 +64,14 @@
     <video-files/>
 </action>
 ```
+### Secure delete
+Requires `findtuils`, `coreutils`, `xdialog`
 ```
 <action>
-    <icon>shred</icon>
+    <icon>nix-shred</icon>
     <name>Secure Delete</name>
     <unique-id>1451484670887515-4</unique-id>
-    <command>srm_guified.sh %F</command>
+    <command>srm_guified.sh %f</command>
     <description>Securely Wipe Files Before Deletion</description>
     <patterns>*</patterns>
     <directories/>

@@ -1,15 +1,55 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# format USB device to exfat
+
 # ensure a device is given
-DEVICE="$1"
-if [[ -z ${DEVICE} ]]; then
+if [[ -z "$1" ]]; then
     echo "No device specified ..."
+    echo "Usage: format-usb.sh /dev/sdy"
+    exit
+fi
+
+# get the last part of device path
+device="$(echo $1 | cut -d'/' -f3)"
+echo "Checking device on => $device"
+
+# create list of available devices
+devices="$(lsblk -o NAME | egrep '^sd')"
+
+# check if device is valid - abort if not
+if ! [[ $devices =~ (^|[[:space:]])$device($|[[:space:]]) ]]; then
+    echo "$1 not found"
+    echo "Aborting"
     exit 1
 fi
-# Get user confirmation
-read -r -p "Confirm reformat of $1 [y/N] " resp
+
+# check if device is removable - abort if not
+[[ $(echo $(lsblk -no RM "$1" | head -n 1)) = '0' ]] && \
+    echo "Non removable device detected!" && \
+    echo "Aborting" && \
+    exit 1
+
+# Ask for confirmation
+read -r -p "Confirm reformat of '$1' [y/N] " resp
 if [[ "$resp" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    echo "Formatting ${DEVICE} ..."
-    printf 'o\ny\nn\n\n\n\n0700\nw\ny\n' | sudo gdisk $DEVICE && sudo mkexfatfs "$DEVICE"1
+
+    # Repeat confirmation question
+    read -r -p "Irrevocably format  '$1' [y/N] " resp2
+    if [[ "$resp2" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+
+        # will do
+        echo "Formatting $1 ..."
+
+        # use gdisk to create new partition table
+        # and a single Microsoft basic data partition type
+        printf 'o\ny\nn\n\n\n\n0700\nw\ny\n' | \
+            sudo gdisk "$1" && \
+            sudo mkexfatfs "$1"1
+
+        # done
+        echo "Done"
+        exit
+    fi
+    echo "Formatting aborted"
 else
     echo "Formatting aborted"
 fi
