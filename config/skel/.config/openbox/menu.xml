@@ -164,13 +164,10 @@
 			<command>exo-open --launch MailReader</command>
 		</action>
 	</item>
-	<separator label="Applications"/>
 	<menu id="disk-utilities"/>
 	<menu id="screenshot"/>
 	<menu id="applications" label="Applications" execute="/usr/bin/obmenu-generator -S ~/.config/obmenu-generator/applications.pl"/>
-	<separator label="Home"/>
 	<menu id="pipe-placesmenu" label="Places" execute="manjaro-places-pipemenu --recent ~/"/>
-	<separator label="Settings"/>
 	<item label="Switch Menu">
 		<action name="Execute">
 			<command>switchmenu -dynamic</command>
@@ -179,7 +176,6 @@
 	<menu id="preferences"/>
 	<menu id="keybinds" label="Keybinds" execute="manjaro-kb-pipemenu"/>
 	<menu id="help" label="Help and Info" execute="manjaro-help-pipemenu"/>
-	<separator/>
 	<item label="Lock Screen">
 		<action name="Execute">
 			<command>lockscreen -- scrot</command>
