@@ -1,6 +1,2 @@
 #!/bin/bash
-IP=$(curl -s https://get.geojs.io/v1/ip)
-echo ${IP}
-notify-send --urgency=normal --expire-time=5000 "Public IP " "\nYour public IP address is $IP\n"
-#yad --title="Public IP" --text="Your public IP is '"$IP"'" --button=OK --center --width=300 --height=100
-#zenity --info --text "Your public IP is '"$IP"'" --no-wrap
+curl -s https://get.geojs.io/v1/ip
