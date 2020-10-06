@@ -24,7 +24,7 @@ thunar --daemon &
 sleep 1; nitrogen --restore &
 
 sleep 1; polybar -c ~/.config/polybar/config openbox-bar &
-sleep 1; manjaro-tint2-session &
+#sleep 1; manjaro-tint2-session &
 
 ### launch conky
 manjaro-conky-session &

@@ -1,9 +1,10 @@
 conky.config = {
 -- original author https://github.com/altinukshini/conky_blue
 -- modified by linux-aarhus
--- VARAIABLES --
+-- BEGIN VARIABLES --
 -- edit the templates to match your system
 -- to change the weatherlocation see ~/.config/conky/README.md
+
 -- location template
 	template0 = 'LINUX AARHUS',
 
@@ -15,6 +16,8 @@ conky.config = {
 
 -- wireless interface template
 	template2 = 'wlan2',
+
+-- END VARIABLES --
 
 -- Conky settings
 	background = false,
@@ -82,7 +85,6 @@ ${execi 600 bash ${HOME}/.config/conky/accu_weather/acc_rss}${font Radio Space:s
 #					    System
 #---------------------------------------------------------------------------------------------------------------------
 ${font :size=8}SYSTEM${goto 85}${color B90004}${hr 1}${color}
-  hostname$alignr$nodename
   uptime${alignr}${uptime_short}
   kernel${color}${alignr}${exec "uname -r | cut -d'-' -f1"} ${machine}${color}
   os${alignr}${exec "lsb_release -d | awk '{print $2" "$3}'"}
@@ -90,8 +92,10 @@ ${font :size=8}SYSTEM${goto 85}${color B90004}${hr 1}${color}
 #						Network
 #---------------------------------------------------------------------------------------------------------------------
 ${voffset 10}NETWORK${goto 85}${color B90004}${hr 1}${color}
-  public ip${alignr}${execi 10 curl -s https://get.geojs.io/v1/ip}
-# if template1 interface connected
+  hostname$alignr$nodename
+# PUBLIC IP
+${if_gw}  public ip${alignr}${execi 10 curl -s https://get.geojs.io/v1/ip}${else}  network down${endif}
+# If interface in tamplate1 is up
 ${voffset -5}${if_existing /proc/net/route ${template1}}
 LAN${goto 85}${color B90004}${hr 1}${voffset 2}${color}
   ip${color} ${alignr}${addr ${template1}}

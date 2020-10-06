@@ -5,7 +5,7 @@
 <menu id="disk-utilities" label="Disk Utilities">
 	<item label="Clonezilla">
 		<action name="Execute">
-			<command>termite -t "Clonezilla" -e &quot;sudo clonezilla&quot;</command>
+			<command>termite -t &quot;Clonezilla&quot; -e &quot;sudo clonezilla&quot;</command>
 		</action>
 	</item>
 	<item label="Disks">
@@ -22,17 +22,17 @@
 <menu id="screenshot" label="Screenshot">
 	<item label="Screenshot in 5">
 		<action name="Execute">
-			<command>scrot -d 5 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xviewer $$(xdg-user-dir PICTURES)/$f&apos;</command>
+			<command>scrot -d 5 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xdg-open $$(xdg-user-dir PICTURES)/$f&apos;</command>
 		</action>
 	</item>
 	<item label="Screenshot in 10">
 		<action name="Execute">
-			<command>scrot -d 10 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xviewer $$(xdg-user-dir PICTURES)/$f&apos;</command>
+			<command>scrot -d 10 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xdg-open $$(xdg-user-dir PICTURES)/$f&apos;</command>
 		</action>
 	</item>
 	<item label="Screenshot With Selection">
 		<action name="Execute">
-			<command>scrot -s &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xviewer $$(xdg-user-dir PICTURES)/$f&apos;</command>
+			<command>scrot -s &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; xdg-open $$(xdg-user-dir PICTURES)/$f&apos;</command>
 		</action>
 	</item>
 </menu>
@@ -78,17 +78,17 @@
 		<separator/>
 		<item label="Edit autostart">
 			<action name="Execute">
-				<command>exo-open ~/.config/openbox/autostart</command>
+				<command>xdg-open ~/.config/openbox/autostart</command>
 			</action>
 		</item>
 		<item label="Edit menu.xml">
 			<action name="Execute">
-				<command>exo-open ~/.config/openbox/menu.xml</command>
+				<command>xdg-open ~/.config/openbox/menu.xml</command>
 			</action>
 		</item>
 		<item label="Edit rc.xml">
 			<action name="Execute">
-				<command>exo-open ~/.config/openbox/rc.xml</command>
+				<command>xdg-open ~/.config/openbox/rc.xml</command>
 			</action>
 		</item>
 	</menu>
@@ -146,17 +146,17 @@
 	<separator label="Manjaro Openbox"/>
 	<item label="Terminal">
 		<action name="Execute">
-			<command>termite  -t "Terminal"</command>
+			<command>termite  -t &quot;Terminal&quot;</command>
 		</action>
 	</item>
 	<item label="File Manager">
 		<action name="Execute">
-			<command>exo-open --launch FileManager</command>
+			<command>xdg-open ~/</command>
 		</action>
 	</item>
 	<item label="Web Browser">
 		<action name="Execute">
-			<command>exo-open --launch WebBrowser</command>
+			<command>xdg-open about:home</command>
 		</action>
 	</item>
 	<item label="Mail Reader">
@@ -164,23 +164,21 @@
 			<command>exo-open --launch MailReader</command>
 		</action>
 	</item>
-	<separator/>
+	<separator label="Applications"/>
 	<menu id="disk-utilities"/>
 	<menu id="screenshot"/>
 	<menu id="applications" label="Applications" execute="/usr/bin/obmenu-generator -S ~/.config/obmenu-generator/applications.pl"/>
-	<separator/>
+	<separator label="Home"/>
 	<menu id="pipe-placesmenu" label="Places" execute="manjaro-places-pipemenu --recent ~/"/>
-	<separator/>
-	<menu id="preferences"/>
-	<menu id="keybinds" label="Keybinds" execute="manjaro-kb-pipemenu"/>
-	<separator/>
-	<menu id="help" label="Help and Info" execute="manjaro-help-pipemenu"/>
-	<separator/>
+	<separator label="Settings"/>
 	<item label="Switch Menu">
 		<action name="Execute">
 			<command>switchmenu -dynamic</command>
 		</action>
 	</item>
+	<menu id="preferences"/>
+	<menu id="keybinds" label="Keybinds" execute="manjaro-kb-pipemenu"/>
+	<menu id="help" label="Help and Info" execute="manjaro-help-pipemenu"/>
 	<separator/>
 	<item label="Lock Screen">
 		<action name="Execute">

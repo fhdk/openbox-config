@@ -1,1 +1,0 @@
-../share/thunar_srm/srm_guified.sh

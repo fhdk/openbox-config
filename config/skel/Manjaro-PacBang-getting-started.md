@@ -57,7 +57,7 @@ When you have your city's weather forecast in your browser - goto the source of 
 
     var currentLocation =
 
-This variable hold the data need for the rss link which is parsed by acc_rss script. The below codeblock is the datastructure for the city of Aarhus in Denmark.
+This variable hold the data needed for the rss link - which is parsed by acc_rss script. The below codeblock is the datastructure for the city of Aarhus in Denmark.
 
 	var currentLocation = {
 		"administrativeArea":{

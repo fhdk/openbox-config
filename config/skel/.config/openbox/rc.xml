@@ -24,37 +24,37 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Roboto</name>
+      <name>DejaVu Sans</name>
       <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Roboto</name>
-      <size>11</size>
+      <name>DejaVu Sans</name>
+      <size>10</size>
       <weight>Normal</weight>
-      <slant>Italic</slant>
+      <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Roboto Medium</name>
-      <size>12</size>
+      <name>DejaVu Sans</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Roboto</name>
-      <size>11</size>
+      <name>DejaVu Sans</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Roboto</name>
+      <name>Sans</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Roboto</name>
+      <name>Sans</name>
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -341,6 +341,173 @@
         <height>50%</height>
       </action>
     </keybind>
+    <!-- Tiling 3 x 2  -->
+    <keybind key="W-KP_1">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>34%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_2">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>34%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_5">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_7">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>34%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- Tiling 3 x 3  -->
+    <!-- TODO
+    <keybind key="W-KP_1">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>34%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_2">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>34%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_5">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>33%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_7">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>34%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-33%</x>
+        <y>0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-KP_9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>33%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+-->
+    <!-- Next window navigation -->
     <keybind key="A-KP_Add">
       <action name="NextWindow">
         <dialog>none</dialog>
@@ -444,27 +611,27 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; xviewer $$(xdg-user-dir PICTURES)/$f'</command>
+        <command>scrot 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; xdg-openn $$(xdg-user-dir PICTURES)/$f'</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>scrot -d 5 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; xviewer $$(xdg-user-dir PICTURES)/$f'</command>
+        <command>scrot -d 5 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; xdg-open $$(xdg-user-dir PICTURES)/$f'</command>
       </action>
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>exo-open --launch FileManager</command>
+        <command>xdg-open ~/</command>
       </action>
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>exo-open --launch TerminalEmulator</command>
+        <command>termite -t "Termite"</command>
       </action>
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>exo-open --launch WebBrowser</command>
+        <command>xdg-open about:home</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -494,12 +661,12 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>exo-open --launch TerminalEmulator</command>
+        <command>termite -t "Termite"</command>
       </action>
     </keybind>
     <keybind key="W-KP_Enter">
       <action name="Execute">
-        <command>exo-open --launch TerminalEmulator</command>
+        <command>termite -t "Termite"</command>
       </action>
     </keybind>
     <keybind key="C-Escape">
@@ -520,6 +687,11 @@
     <keybind key="A-F2">
       <action name="Execute">
         <command>rofr.sh -r</command>
+      </action>
+    </keybind>
+    <keybind key="W-F10">
+      <action name="Execute">
+        <command>openbox --reconfigure</command>
       </action>
     </keybind>
     <keybind key="A-F4">
@@ -557,81 +729,6 @@
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="W-KP_1">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_2">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_3">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>-0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_4">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_5">
-      <action name="MaximizeFull"/>
-    </keybind>
-    <keybind key="W-KP_6">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_7">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_8">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-KP_9">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
       </action>
     </keybind>
     <keybind key="W-Right">
@@ -941,5 +1038,11 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
+    <application name="oblogout">
+      <position force="no">
+        <monitor>1</monitor>
+      </position>
+      <fullscreen>yes</fullscreen>
+    </application>
   </applications>
 </openbox_config>
